@@ -48,7 +48,7 @@ spec:
         {{ end }}
         - name: k8skafka
           imagePullPolicy: Always
-          image: mesosphere/kafka:1.0.1-2.3.1
+          image: zmalikshxil/kafka:cruise
           resources:
             requests:
               memory: {{ .Params.BROKER_MEM }}
