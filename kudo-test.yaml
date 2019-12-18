@@ -18,6 +18,7 @@ kubectl:
 - kudo install --skip-instance ./templates/akka/operator-shoppingcart/
 testDirs:
 - ./repository/zookeeper/tests
+- ./repository/kafka/tests
 startKIND: true
 startKUDO: true
 timeout: 300
