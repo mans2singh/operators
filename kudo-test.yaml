@@ -4,6 +4,7 @@ manifestDirs:
 - ./test/manifests/
 kubectl:
 - kudo init --crd-only
+- kudo install --skip-instance ./repository/cassandra/3.11/operator/
 - kudo install --skip-instance ./repository/cowsay/operator/
 - kudo install --skip-instance ./repository/elastic/operator/
 - kudo install --skip-instance ./repository/first-operator/operator/
@@ -13,6 +14,8 @@ kubectl:
 - kudo install --skip-instance ./repository/mysql/operator/
 - kudo install --skip-instance ./repository/redis/operator/
 - kudo install --skip-instance ./repository/zookeeper/operator/
+- kudo install --skip-instance ./templates/akka/operator/
+- kudo install --skip-instance ./templates/akka/operator-shoppingcart/
 testDirs:
 - ./repository/zookeeper/tests
 startKIND: true
