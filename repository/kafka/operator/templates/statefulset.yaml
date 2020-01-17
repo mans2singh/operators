@@ -20,13 +20,14 @@ spec:
       labels:
         app: kafka
         kafka: {{ .OperatorName }}
+        kudo.dev/instance: {{ .Name }}
     spec:
       terminationGracePeriodSeconds: 300
       serviceAccountName: {{ .Name }}
       containers:
         {{ if eq .Params.METRICS_ENABLED "true" }}
         - name: kafka-node-exporter
-          image: quay.io/prometheus/node-exporter
+          image: quay.io/prometheus/node-exporter:v0.18.1
           resources:
             requests:
               memory: 20Mi
